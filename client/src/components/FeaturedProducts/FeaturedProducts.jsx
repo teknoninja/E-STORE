@@ -44,11 +44,7 @@ const FeaturedProducts = ({ type }) => {
       <div className="top">
         <h1>{type} products</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas.
+        Welcome to a curated showcase of our most distinguished pieces. Each item in our Featured Collection is selected for its superior craftsmanship, timeless design, and exceptional quality. Discover the styles everyone is talking about. This handpicked selection features our latest arrivals and all-time favorites, chosen for their standout quality and modern appeal. Shop the best of the season right here
         </p>
       </div>
       <div className="bottom">

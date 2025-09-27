@@ -50,11 +50,11 @@ const Navbar = () => {
         <div className="left">
           <div className="item">
             <img src="/img/en.png" alt="" />
-            <KeyboardArrowDownIcon />
+          
           </div>
           <div className="item">
-            <span>USD</span>
-            <KeyboardArrowDownIcon />
+            <span>USA</span>
+         
           </div>
           
           {/* Dynamically render category links here */}
