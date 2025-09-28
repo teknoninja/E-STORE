@@ -8,6 +8,7 @@ const FeaturedProducts = ({ type }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  
 
   useEffect(() => {
     // 3. Define the GROQ query to filter by type

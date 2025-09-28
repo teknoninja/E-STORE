@@ -15,6 +15,8 @@ const Navbar = () => {
   const [categories, setCategories] = useState(null);
   const products = useSelector((state) => state.cart.products);
   const cartRef = useRef(); 
+  
+
 
   useEffect(() => {
     const query = `*[_type == "category"]{_id, title}`;
@@ -60,7 +62,7 @@ const Navbar = () => {
           {/* Dynamically render category links here */}
           {categories?.map((category) => (
             <div className="item" key={category._id}>
-              <Link className="link" to={`/products/${category._id}`}>
+              <Link className="link hover-underline" to={`/products/${category._id}`}>
                 {category.title}
               </Link>
             </div>
@@ -69,27 +71,41 @@ const Navbar = () => {
 
         <div className="center">
           <Link className="link" to="/">
-            MY-STORE
+            Fit-Wear
           </Link>
         </div>
         
         <div className="right">
           {/* Static links are restored here */}
           <div className="item">
-            <Link className="link" to="/">
+            <Link className="link hover-underline" to="/">
               Homepage
             </Link>
           </div>
-          <div className="item" onClick={handleScroll} style={{ cursor: 'pointer' }}>
+          <div className="item hover-underline" onClick={handleScroll} style={{ cursor: 'pointer' }}>
             About
           </div>
-          <div className="item" onClick={handleScroll} style={{ cursor: 'pointer' }}>
+          <div className="item hover-underline" onClick={handleScroll} style={{ cursor: 'pointer' }}>
             Contact
           </div>
-          <div className="item" onClick={handleScroll} style={{ cursor: 'pointer' }}>
-           
-              Stores
-           
+           {/* 3. This is the new dropdown container */}
+           <div className="item dropdown-container">
+            <span 
+              className="hover-underline" 
+               // Toggle state on click
+              style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+            >
+              Stores <KeyboardArrowDownIcon />
+            </span>
+            
+            {/* 4. Conditionally render the dropdown menu */}
+            
+              <div className="dropdown-menu">
+                <Link to="/stores/ny" className="dropdown-item" >Delhi</Link>
+                <Link to="/stores/la" className="dropdown-item" >New York</Link>
+                <Link to="/stores/chicago" className="dropdown-item" >Chicago</Link>
+              </div>
+            
           </div>
           <div className="icons">
             <SearchIcon />
