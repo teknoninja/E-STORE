@@ -101,9 +101,9 @@ const Navbar = () => {
             {/* 4. Conditionally render the dropdown menu */}
             
               <div className="dropdown-menu">
-                <Link to="/stores/ny" className="dropdown-item" >Delhi</Link>
-                <Link to="/stores/la" className="dropdown-item" >New York</Link>
-                <Link to="/stores/chicago" className="dropdown-item" >Chicago</Link>
+                <Link to="/" className="dropdown-item" >Delhi</Link>
+                <Link to="/" className="dropdown-item" >New York</Link>
+                <Link to="/" className="dropdown-item" >Chicago</Link>
               </div>
             
           </div>
